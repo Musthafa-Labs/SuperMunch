@@ -1,0 +1,212 @@
+MASTER PROMPT – “Super Munch – Keep Munchin Website”
+Project Overview
+
+Create a responsive, comic-themed interactive website for:
+
+Super Munch – Casual Fast-Food Café
+Address: 53, 7th Avenue, Sarvamangala Colony, Manthope Colony, Ashok Nagar, Chennai, Tamil Nadu, India
+Phone & WhatsApp: +91 89394 36427
+Hours: 12:00 PM – 9:30 PM daily
+
+Target: Students, youth, casual hangouts
+
+DESIGN STYLE
+
+Comic-book theme: bold outlines, bright colors (red, yellow, cyan, green)
+
+Fonts: Bangers / Comic Neue for headings, clean sans-serif for body
+
+Section backgrounds: halftone dots, speech bubble accents
+
+Buttons: bold outlines, comic pop hover effect
+
+Cards: rounded with slight shadow
+
+Smooth section transitions: slide/bounce/pop-in
+
+Fully mobile-first, responsive layout
+
+HEADER / NAVIGATION
+
+No hamburger menu
+
+Top-right horizontal navigation: Home | Highlights | Menu | Contact | Order Now
+
+Logo left: Super Munch (comic style)
+
+All links scroll smoothly to the respective sections
+
+HERO / FIRST PAGE
+
+Main slogan: “Keep Munchin”
+
+Subheading: “Burgers, Waffles, Shakes & More – All Veg!”
+
+CTA buttons:
+
+Order Now on WhatsApp → https://wa.me/918939436427?text=Hi%20Super%20Munch
+
+Call Now → tel:+918939436427
+
+Animated comic icons (burger, fries, milkshake)
+
+MENU SECTION
+Data Structure with Prices
+const menu = {
+  starters: [
+    {name:"Classic Garlic Bread",price:120},
+    {name:"Cheesy Garlic Bread",price:150},
+    {name:"Onion Rings",price:130},
+    {name:"Chilli Cheese Bruschetta",price:180},
+    {name:"Paneer Bruschetta",price:200},
+    {name:"Mushroom Bruschetta",price:200},
+    {name:"Cheese Balls",price:140},
+    {name:"Peri Peri Paneer Fingers",price:180},
+    {name:"Cajun Spicy Potatoes",price:160}
+  ],
+  burgers: [
+    {name:"Veggies Grilled Burger",price:200},
+    {name:"Bombay Aloo Tikki Burger",price:220},
+    {name:"Malai Cottage Cheese Burger",price:240},
+    {name:"Fiery Paneer Burger",price:250},
+    {name:"Mushroom Teriyaki Burger",price:260}
+  ],
+  sandwiches: [
+    {name:"Veg Grilled Sandwich",price:180},
+    {name:"Cheesy Grilled Sandwich",price:200},
+    {name:"Creamy Paneer Sandwich",price:220},
+    {name:"Peri Peri Paneer Sandwich",price:230},
+    {name:"Spinach & Corn Sandwich",price:200},
+    {name:"Grilled Peri Peri Fries Sandwich",price:250},
+    {name:"Teriyaki Mushroom Sandwich",price:220},
+    {name:"Paneer Tikka Sandwich",price:240},
+    {name:"Bombay Grilled Sandwich",price:210},
+    {name:"Italian Club Sandwich",price:250}
+  ],
+  pizza: [
+    {name:"Margherita",price:300},
+    {name:"Veggie Loaded",price:350},
+    {name:"Paneer Makhani",price:380},
+    {name:"Farm Garden",price:370},
+    {name:"Pesto Retreat",price:360},
+    {name:"Shroom Teriyaki",price:390},
+    {name:"Chilli Paneer",price:400}
+  ],
+  pasta: [
+    {name:"Alfredo",price:250},
+    {name:"Arrabiata",price:260},
+    {name:"Pink Pasta",price:270},
+    {name:"Lime Chilli Pasta",price:280},
+    {name:"Shroom Teriyaki Pasta",price:300},
+    {name:"Pesto Pasta",price:290},
+    {name:"Mac & Cheese",price:250},
+    {name:"Peri Peri Mac Cheese",price:270},
+    {name:"Aglio Olio",price:260},
+    {name:"Paneer Makhani Pasta",price:300},
+    {name:"Veg Lasagne",price:320}
+  ],
+  waffles: [
+    {name:"Banana Caramel Waffle",price:200},
+    {name:"Crunchy Butterscotch Waffle",price:220},
+    {name:"Oreo Nutella Waffle",price:240},
+    {name:"KitKat White Chocolate Waffle",price:250},
+    {name:"Triple Chocolate Waffle",price:260},
+    {name:"Red Velvet Waffle",price:270},
+    {name:"Lotus Biscoff Waffle",price:280}
+  ],
+  shakes: [
+    {name:"Parle-G Caramel",price:150},
+    {name:"Crunchy Butterscotch",price:150},
+    {name:"Chocolate Peanut Butter",price:160},
+    {name:"Mixed Berry Cheesecake",price:170},
+    {name:"Super Milo",price:150},
+    {name:"Blueberry Cheesecake",price:170},
+    {name:"Mango Madness",price:160},
+    {name:"Triple Chocolate",price:180},
+    {name:"Oreo Nutella",price:180},
+    {name:"KitKat Caramel",price:180},
+    {name:"Oreo Strawberry",price:180},
+    {name:"Brownie Break",price:180},
+    {name:"Lotus Biscoff",price:180}
+  ],
+  wraps: [
+    {name:"Veggie Wrap",price:200},
+    {name:"Creamy Paneer Wrap",price:220},
+    {name:"Peri Peri Paneer Wrap",price:230},
+    {name:"Paneer Makhani Wrap",price:240},
+    {name:"Mushroom Teriyaki Wrap",price:230},
+    {name:"Bean Delight Wrap",price:220},
+    {name:"Paneer Tikka Wrap",price:240}
+  ],
+  dips: [
+    {name:"Chilli Mayo",price:50},
+    {name:"Cocktail Dip",price:50},
+    {name:"Schezwan Chutney",price:50},
+    {name:"Signature Salsa",price:60},
+    {name:"Cheesy Jalapeno",price:60},
+    {name:"Peri Peri Mayo",price:60}
+  ]
+};
+Menu Interaction / Ordering
+
+Click on a category → comic modal opens listing dishes + price
+
+Each dish has two CTA buttons:
+
+Order via WhatsApp → auto-filled with dish name
+
+Order via Zomato → link to Zomato listing
+
+Comic-style modal: bold heading, speech-bubble style price box
+
+Modal close button: comic-style “X”
+
+Pincode Check (Optional for Delivery)
+const serviceablePincodes = [600083, 600034, 600079, 600021];
+
+function checkPincode(dishName){
+  const pin = prompt("Enter your Pincode to check delivery:");
+  if(serviceablePincodes.includes(parseInt(pin))){
+    window.open(`https://wa.me/918939436427?text=Hi%20Super%20Munch,%20I%20would%20like%20to%20order%20${dishName}`,"_blank");
+  } else {
+    alert("Sorry! We don’t deliver to this area yet 😢");
+  }
+}
+
+Works when user clicks “Order via WhatsApp”
+
+HIGHLIGHTS / POPULAR PICKS
+
+Paneer & Fiery Paneer Burgers
+
+Peri Peri & Classic Fries
+
+Pasta & Veg Pizzas
+
+Milkshakes & Hot Chocolate
+
+Waffles
+
+Clicking any opens menu modal + pincode check + WhatsApp / Zomato order
+
+CONTACT SECTION
+
+Display address line only
+
+CTA buttons: Call / WhatsApp (same number)
+
+Opening hours: 12:00 PM – 9:30 PM daily
+
+TECHNICAL REQUIREMENTS
+
+No social media links
+
+Fully responsive (desktop + mobile)
+
+Comic-style animations: buttons, modals, section scrolls
+
+Menu and highlights fully interactive
+
+All CTA buttons functional
+
+SEO meta tags: title, description, keywords: “Veg fast food Chennai, Student-friendly café, Super Munch Ashok Nagar”
